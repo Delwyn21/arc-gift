@@ -1,0 +1,1 @@
+const hre=require("hardhat");async function main(){const C=await hre.ethers.getContractFactory("ArcGift");const c=await C.deploy();await c.waitForDeployment();console.log("ArcGift:",await c.getAddress());}main().catch(e=>{console.error(e);process.exit(1)});
